@@ -15,16 +15,13 @@ const Login = ({ onLogin }) => {
       {/* Background Image with Orange Overlay */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-        style={{ backgroundImage: 'url(https://i.imgur.com/gYAVhPD.png)' }}
       >
         <div className="absolute inset-0 bg-orange-500 opacity-60"></div>
       </div>
 
       {/* Login Form */}
       <div className="relative z-10 bg-black/20 backdrop-blur-sm p-10 rounded-xl text-white text-center max-w-md w-full">
-        <div className="flex justify-center mb-4">
-          <img src="https://i.imgur.com/3Z6O5p6.png" alt="Logo" className="h-12 w-12" />
-        </div>
+       
         <h1 className="text-3xl font-bold">AI Smart Rollback System</h1>
         <p className="text-zinc-300 mb-6">Developer Dashboard</p>
 
