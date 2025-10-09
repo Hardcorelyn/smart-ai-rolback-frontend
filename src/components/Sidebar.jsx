@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router';
-import { LayoutDashboard, Settings, ChevronsLeft, ChevronsRight } from 'lucide-react';
+import { LayoutDashboard, Settings, ChevronsLeft, History, ChevronsRight } from 'lucide-react';
 import { useState } from 'react';
 
 const Sidebar = () => {
@@ -15,7 +15,6 @@ const Sidebar = () => {
   return (
     <aside className={`bg-white shadow-md flex flex-col transition-all duration-300 ${isCollapsed ? 'w-20' : 'w-64'}`}>
       <div className={`p-4 flex items-center gap-3 border-b border-zinc-200 ${isCollapsed ? 'justify-center' : ''}`}>
-        <img src="https://i.imgur.com/3Z6O5p6.png" alt="Logo" className="h-8 w-8" />
         {!isCollapsed && <h1 className="text-xl font-bold text-zinc-800">AI SDRS</h1>}
       </div>
 
@@ -27,6 +26,10 @@ const Sidebar = () => {
         <NavLink to="/settings" className={navLinkClass}>
           <Settings />
           {!isCollapsed && <span className="ml-3">Settings</span>}
+        </NavLink>
+         <NavLink to="/audit-logs" className={navLinkClass}>
+          <History />
+          {!isCollapsed && <span className="ml-3">Audit Logs</span>}
         </NavLink>
       </nav>
 
